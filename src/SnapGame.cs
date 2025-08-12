@@ -10,7 +10,12 @@ namespace CardGames
         {
             Bitmap cards;
             cards = SwinGame.LoadBitmapNamed ("Cards", "Cards.png");
+<<<<<<< HEAD
             SwinGame.BitmapSetCellDetails (cards, 167, 250, 13, 5, 53);      // set the cells in the bitmap to match the cards
+=======
+            SwinGame.BitmapSetCellDetails (cards, 82, 110, 13, 5, 53); 
+			SwinGame.LoadFontNamed ("GameFont", " ChunkFive-Regular.otf", 12);     // set the cells in the bitmap to match the cards
+>>>>>>> origin/change-text-font
         }
 
 		/// <summary>
@@ -41,9 +46,14 @@ namespace CardGames
 			Card top = myGame.TopCard;
 			if (top != null)
 			{
-				SwinGame.DrawText ("Top Card is " + top.ToString (), Color.RoyalBlue, 0, 20);
-				SwinGame.DrawText ("Player 1 score: " + myGame.Score(0), Color.RoyalBlue, 0, 30);
-				SwinGame.DrawText ("Player 2 score: " + myGame.Score(1), Color.RoyalBlue, 0, 40);
+				//rinkey
+				SwinGame.DrawText ("Top Card is " + top.ToString (),  
+
+				Color.RoyalBlue, "GameFont", 0, 20);   
+
+				SwinGame.DrawText ("Player 1 score: " + myGame.Score(0), Color.RoyalBlue, "GameFont", 0, 30);
+
+				SwinGame.DrawText ("Player 2 score: " + myGame.Score(1), Color.RoyalBlue, "GameFont", 0, 40);
 				SwinGame.DrawCell (SwinGame.BitmapNamed ("Cards"), top.CardIndex, 350, 50);
 				SwinGame.DrawCell (SwinGame.BitmapNamed("Cards"), top.CardIndex, 521, 153);
 			}
@@ -51,8 +61,12 @@ namespace CardGames
 			{
 				SwinGame.DrawText ("No card played yet...", Color.RoyalBlue, 0, 20);
 			}
+<<<<<<< HEAD
 			SwinGame.DrawCell (SwinGame.BitmapNamed ("Cards"),52, 155, 153);
 
+=======
+			// Hdello
+>>>>>>> origin/change-text-font
 			// Draw the back of the cards... to represent the deck
 			SwinGame.DrawCell (SwinGame.BitmapNamed ("Cards"), 52, 160, 50);
 
