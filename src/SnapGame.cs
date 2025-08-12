@@ -41,13 +41,12 @@ namespace CardGames
 			Card top = myGame.TopCard;
 			if (top != null)
 			{
-				SwinGame.DrawText ("Top Card is " + top.ToString (),
+				//rinkey
+				SwinGame.DrawText ("Top Card is " + top.ToString (),  
 
-				Color.RoyalBlue, "GameFont", 0, 20);
+				Color.RoyalBlue, "GameFont", 0, 20);   
 
-				SwinGame.DrawText ("Player 1 score: " +
-
-				myGame.Score(0), Color.RoyalBlue, "GameFont", 0, 30);
+				SwinGame.DrawText ("Player 1 score: " + myGame.Score(0), Color.RoyalBlue, "GameFont", 0, 30);
 
 				SwinGame.DrawText ("Player 2 score: " + myGame.Score(1), Color.RoyalBlue, "GameFont", 0, 40);
 				SwinGame.DrawCell (SwinGame.BitmapNamed ("Cards"), top.CardIndex, 350, 50);
@@ -56,7 +55,7 @@ namespace CardGames
 			{
 				SwinGame.DrawText ("No card played yet...", Color.RoyalBlue, 0, 20);
 			}
-
+			// Hdello
 			// Draw the back of the cards... to represent the deck
 			SwinGame.DrawCell (SwinGame.BitmapNamed ("Cards"), 52, 160, 50);
 
